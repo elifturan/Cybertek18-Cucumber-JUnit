@@ -4,7 +4,7 @@ public class TestClassForGit {
     public static void main(String[] args) {
 
 
-        System.out.println("HEllo GitHub");
+        System.out.println("HEllo GitHub Elif Orhandan selamlar sana");
 
 
 
