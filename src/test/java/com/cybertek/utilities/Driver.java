@@ -15,6 +15,9 @@ public class Driver {
     }
 
     private static WebDriver driver;
+    private static ChromeOptions chromeOptions;
+    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+
 
     public static WebDriver getDriver(){
 
@@ -34,7 +37,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
-                case "firefox-headless":
+                    case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
                     break;
